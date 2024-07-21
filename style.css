@@ -40,6 +40,8 @@ button {
 .about-image-sun {
     width: 100px;
     height: 100px;
+    margin-right: 10px;
+    margin-bottom: 200px;
 }
 
 .about-image-solar-panel {
@@ -79,4 +81,6 @@ button {
     max-width: 550px;
 }
 
-
+.form-container {
+    max-width: 550px;
+}
