@@ -1,3 +1,12 @@
+@keyframes rotation {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     color: #213053;
@@ -7,7 +16,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 20px;
+    padding: 20px 20px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    
 
 }
 
@@ -26,6 +41,29 @@ header a {
     margin-right: 25px;
 }
 
+.buttom-up {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #23a030;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    padding: 0px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    font-size: 20px;
+}
+
+.buttom-up:hover {
+    background-color: white;
+}
+
+.buttom-up:active {
+    background-color: #23a030
+}
+
+
 button {
     background-color: #23a030;
     border-radius: 15px;
@@ -38,11 +76,17 @@ button {
     transition: 0.3s;
 }
 
+.about-images {
+    animation: fadeInRight 2s;
+}
+
 .about-image-sun {
     width: 100px;
     height: 100px;
     margin-right: 10px;
     margin-bottom: 200px;
+    animation: rotation 10s infinite linear;
+    position: absolute;
 }
 
 .about-image-solar-panel {
@@ -58,6 +102,7 @@ button {
     background: url('img/back.png') no-repeat;
     background-position: center;
     background-size: cover;
+    
 }
 
 .about h1 {
@@ -80,6 +125,8 @@ button {
 
 .about-info {
     max-width: 550px;
+    animation: fadeInLeft 2s;
+    
 }
 
 .form-container {
@@ -149,6 +196,7 @@ button {
 
 button:hover {
     background-color: #35973d;
+    
 }
 
 button:active {
