@@ -45,29 +45,6 @@ header a {
     margin-right: 25px;
 }
 
-.buttom-up {
-    color: black;
-    background-color: rgb(255, 255, 255);
-    border: 2px solid #23a030;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    padding: 0px;
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    font-size: 20px;
-}
-
-.buttom-up:hover {
-    background-color: white;
-}
-
-.buttom-up:active {
-    background-color: #23a030
-}
-
-
 button {
     background-color: #23a030;
     border-radius: 15px;
@@ -130,6 +107,141 @@ button {
 .about-info {
     max-width: 550px;
     animation: fadeInLeft 2s;
+    
+}
+
+.features {
+    background-color: white;
+    padding: 115px 60px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+}
+
+.card {
+    padding: 35px 40px 25px 40px;
+    border: 1px solid #D9E4E6;
+    border-radius: 5px;
+}
+.card p {
+    font-size: 16px;
+    line-height: 22px;
+    opacity: 0.8;
+}
+
+.card-logo {
+    width: 100px;
+    height: 100px;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: #eaeff9;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-border {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid #E6EAF4;
+}
+
+.features-feedback {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features-feedback-left {
+    margin-right: 10px;
+}
+
+.features-feedback-left h2 {
+    font-size: 48px;
+}
+
+.features-feedback-left p {
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.7;
+}
+
+.features-feedback-right {
+    display: flex;
+    align-items: stretch;
+}
+
+.features-box {
+    padding: 30px 40px 25px 40px;
+    color: white;
+    border-radius: 25px;
+}
+
+.features-box h3 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 48px;
+}
+
+.features-box.features-savings-box {
+    background-color: #dc5e26;
+    box-shadow: 0px 6px 0 rgb(221 95 38 / 20%);
+    margin-right: 30px;
+}
+
+.features-box.features-rate-box {
+    background-color: #1D263A;
+    box-shadow: 0px 6px 0 rgb(29 38 58 / 20%);
+}
+
+.stars {
+    color: #ff7039;
+}
+
+.promo {
+    display: flex;
+}
+
+.promo-image {
+    background-image: url('img/promo.jpg');
+    background-position: center;
+    background-size: cover;
+    flex-shrink: 0;
+    width: 50%;
+}
+
+.promo-right {
+    background-color: #dd5f26;
+    padding: 160px 60px;
+}
+
+.promo-card {
+    background-color: white;
+    padding: 30px 40px;
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+    border-radius: 25px;
+}
+
+.promo-card p {
+    opacity: 0.8;
+}
+
+.promo-button {
+    display: flex;
+    justify-content: center;
+}
+
+.promo-card button {    
+    background-color: #107b1c;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 15px 30px;
+    font-weight: 600;
     
 }
 
@@ -244,22 +356,75 @@ button:active {
 }
 
 @media (max-width: 720px) {
-    section {
-        box-sizing: border-box;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
-    footer {
-        box-sizing: border-box;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    
     .header-logo {
         height: 20px;
     }
     
+    section {
+        box-sizing: border-box;
+    }
+
+    .features {
+        padding: 50px  10px;
+    }
+    
+    .cards {
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 50px;
+    }
+
+    .features-feedback {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .features-feedback-left {
+        margin-right: 0;
+    }
+
+    .features-feedback-left h2 {
+        font-size: 36px;
+    }
+
+    .features-feedback-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .features-box h3 {
+        font-size: 36px;
+    }
+
+    .features-box.features-savings-box {
+        margin-right: 0px;
+        margin-bottom: 30px;
+    }
+
+    .promo {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+
+    .promo-image {
+        background-image: url('img/promo.jpg');
+        background-position: center;
+        background-size: cover;
+        flex-shrink: 0;
+        width: 100%;
+        height: 500px;
+    }
+
+    .promo-right {
+        padding: 50px 10px;
+    }
+
+    .about-info {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+           
     .about h1 {
         font-size: 36px;
         line-height: 40px;
@@ -283,9 +448,20 @@ button:active {
         flex-direction: column-reverse;
     }
 
+    .form-container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
    .form-container h1 {
     font-size: 36px;
    }
+    
+   footer {
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
    .footer-container {
     display: flex;
